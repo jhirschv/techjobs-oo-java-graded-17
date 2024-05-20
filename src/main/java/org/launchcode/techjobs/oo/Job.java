@@ -29,7 +29,14 @@ public class Job {
 
     @Override
     public String toString() {
-        return name;
+        String sep = System.lineSeparator();
+        return sep +
+                "ID: " + id + sep +
+                "Name: " + (name.isEmpty() ? "Data not available" : name) + sep +
+                "Employer: " + (employer.getValue().isEmpty() ? "Data not available" : employer.getValue()) + sep +
+                "Location: " + (location.getValue().isEmpty() ? "Data not available" : location.getValue()) + sep +
+                "Position Type: " + (positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()) + sep +
+                "Core Competency: " + (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()) + sep;
     }
 
     @Override
